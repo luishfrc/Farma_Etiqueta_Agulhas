@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gerador de Etiquetas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PAINEL DE EDIÇÃO -->
+    <section class="painel">
+
+        <h1>Gerador de Etiquetas</h1>
+
+        <div class="campo">
+            <label for="linha3">Fabricante:</label>
+            <input
+                type="text"
+                id="linha3"
+                placeholder="..."
+            >
+        </div>
+
+        <div class="campo">
+            <label for="linha4">Quantidade:</label>
+            <input
+                type="text"
+                id="linha4"
+                placeholder="agulhas"
+            >
+        </div>
+
+        <div class="campo">
+            <label for="lote">Lote:</label>
+            <input
+                type="text"
+                id="lote"
+                placeholder="Ex.: 123456"
+            >
+        </div>
+
+        <div class="campo">
+            <label for="validade">Validade:</label>
+            <input
+                type="text"
+                id="validade"
+                placeholder="Ex.: 10/2027"
+            >
+        </div>
+
+        <div class="campo">
+            <label for="rt">RT:</label>
+            <input
+                type="text"
+                id="rt"
+                value="J. M. Umbelino"
+                placeholder="Digite o RT"
+            >
+        </div>
+
+        <div class="campo">
+            <label for="crf">CRF/SP:</label>
+            <input
+                type="text"
+                id="crf"
+                value="60.849"
+                placeholder="Digite o CRF / SP"
+            >
+        </div>
+
+        <div class="botoes">
+
+            <button
+                type="button"
+                id="btnLimpar">
+                Limpar etiquetas
+            </button>
+
+            <button
+                type="button"
+                id="btnImprimir">
+                Imprimir A4
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOLHA A4 -->
+    <main id="areaImpressao"></main>
+
+
+    <script>
+        document.getElementById("btnLimpar").addEventListener("click", function () {
+            document.getElementById("linha3").value = "";
+            document.getElementById("linha4").value = "";
+            document.getElementById("lote").value = "";
+            document.getElementById("validade").value = "";
+            document.getElementById("rt").value = "";
+            document.getElementById("crf").value = "";
+
+            // Remove também as etiquetas já geradas.
+            const area = document.getElementById("areaImpressao");
+            if (area) {
+                area.innerHTML = "";
+            }
+
+            // Coloca o cursor no primeiro campo.
+            document.getElementById("linha3").focus();
+        });
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
