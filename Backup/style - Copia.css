@@ -103,7 +103,7 @@ body {
 
 
 /* =====================================
-   FOLHA A4 (TELA)
+   FOLHA A4
    ===================================== */
 
 #areaImpressao {
@@ -112,8 +112,7 @@ body {
 
     margin: 0 auto;
 
-    /* Mantém a margem superior desejada */
-    padding-top: 1cm; 
+    padding: 0;
 
     background: white;
 
@@ -121,17 +120,13 @@ body {
 
     grid-template-columns: repeat(2, 9.5cm);
 
-    /* Define as 7 linhas com altura exata de 4.1cm */
-    /* grid-template-rows: repeat(7, 4.1cm); */
-    grid-template-rows: repeat(7, 3.8cm);
+    grid-template-rows: repeat(7, 4.1cm);
 
     column-gap: 0;
 
-    row-gap: 0; /* Elimina o espaço vertical entre as etiquetas */
+    row-gap: 0;
 
     justify-content: center;
-
-    box-sizing: border-box; 
 }
 
 
@@ -143,11 +138,9 @@ body {
 
     width: 9.5cm;
 
-    /* A altura da etiqueta deve corresponder exatamente à altura da linha do grid */
-    /* height: 4.1cm; */
-    height: 3.8cm;
+    height: 4cm;
 
-    padding: 0.15cm; /* Pequeno ajuste no padding interno para caber perfeitamente */
+    padding: 0.20cm;
 
     border: 1px solid #000;
 
@@ -166,8 +159,6 @@ body {
     text-align: center;
 
     overflow: hidden;
-
-    box-sizing: border-box; /* Garante que a borda de 1px não aumente a altura total */
 }
 
 
@@ -312,23 +303,19 @@ body {
 
         margin: 0;
 
-        padding-top: 1cm; 
+        padding: 0;
 
         box-shadow: none;
 
         grid-template-columns: repeat(2, 9.5cm);
 
-        /* Ajusta as 7 linhas na impressão */
-        /* grid-template-rows: repeat(7, 4.1cm); */
-        grid-template-rows: repeat(7, 3.8cm);
+        grid-template-rows: repeat(7, 4.1cm);
 
         column-gap: 0;
 
-        row-gap: 0; /* Garante zero espaço entre as etiquetas na impressão */
+        row-gap: 0;
 
         justify-content: center;
-
-        box-sizing: border-box; 
     }
 
     .etiqueta {

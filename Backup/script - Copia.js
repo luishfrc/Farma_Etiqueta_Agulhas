@@ -2,7 +2,7 @@
 // CONFIGURAÇÃO
 // =====================================
 
-const quantidadeEtiquetas = 14; // Alterado de 12 para 14
+const quantidadeEtiquetas = 12;
 
 
 // =====================================
@@ -63,7 +63,7 @@ function criarEtiquetas() {
         elementoLinha1.classList.add("linha1");
 
         elementoLinha1.textContent =
-            "AGULHA PARA APLICAÇÃO DE INSULINA";
+            "AGULHA PARA APLICAÇÃO DE INSULINA COM";
 
 
         // ---------------------------------
@@ -75,7 +75,7 @@ function criarEtiquetas() {
         elementoLinha2.classList.add("linha2");
 
         elementoLinha2.textContent =
-            "COM CANETA 4MM X 0,23MM";
+            "CANETA 4MM X 0,23MM";
 
 
         // ---------------------------------
@@ -185,7 +185,7 @@ function criarEtiquetas() {
 
         textoCRF.classList.add("rotulo");
 
-        textoCRF.textContent = "CRF:";
+        textoCRF.textContent = "CRF / SP:";
 
 
         const valorCRFElemento = document.createElement("span");
