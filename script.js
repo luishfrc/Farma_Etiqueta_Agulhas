@@ -75,7 +75,7 @@ function criarEtiquetas() {
         elementoLinha2.classList.add("linha2");
 
         elementoLinha2.textContent =
-            "COM CANETA 4MM X 0,23MM";
+            "COM CANETA (4MM X 0,23MM)";
 
 
         // ---------------------------------
