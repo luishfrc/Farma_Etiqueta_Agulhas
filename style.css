@@ -1,0 +1,325 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+
+    background: #eeeeee;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =====================================
+   PAINEL DE EDIÇÃO
+   ===================================== */
+
+.painel {
+    width: 700px;
+    max-width: 100%;
+
+    margin: 0 auto 30px;
+
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 8px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.painel h1 {
+    margin-top: 0;
+
+    text-align: center;
+
+    font-size: 24px;
+}
+
+
+/* Campos */
+
+.campo {
+    margin-bottom: 12px;
+}
+
+.campo label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-weight: bold;
+}
+
+.campo input {
+    width: 100%;
+
+    height: 38px;
+
+    padding: 6px 10px;
+
+    font-size: 16px;
+
+    border: 1px solid #aaa;
+
+    border-radius: 4px;
+}
+
+
+/* Botões */
+
+.botoes {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.botoes button {
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #1976d2;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.botoes button:hover {
+    background: #125ca1;
+}
+
+
+/* =====================================
+   FOLHA A4
+   ===================================== */
+
+#areaImpressao {
+    width: 21cm;
+    height: 29.7cm;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+    background: white;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 9.5cm);
+
+    grid-template-rows: repeat(7, 4.1cm);
+
+    column-gap: 0;
+
+    row-gap: 0;
+
+    justify-content: center;
+}
+
+
+/* =====================================
+   ETIQUETA
+   ===================================== */
+
+.etiqueta {
+
+    width: 9.5cm;
+
+    height: 4cm;
+
+    padding: 0.20cm;
+
+    border: 1px solid #000;
+
+    display: grid;
+
+    grid-template-rows:
+        0.55cm
+        0.50cm
+        0.55cm
+        0.55cm
+        0.55cm
+        0.55cm;
+
+    align-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+
+/* =====================================
+   LINHA 1
+   ===================================== */
+
+.linha1 {
+
+    font-size: 11pt;
+
+    font-weight: bold;
+
+    line-height: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================
+   LINHA 2
+   ===================================== */
+
+.linha2 {
+
+    font-size: 11pt;
+
+    font-weight: bold;
+
+    line-height: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================
+   LINHAS 3 E 4
+   ===================================== */
+
+.linha3,
+.linha4 {
+
+    font-size: 10.5pt;
+
+    line-height: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================
+   LINHAS 5 E 6
+   ===================================== */
+
+.linha5,
+.linha6 {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 0.12cm;
+
+    font-size: 9.5pt;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+/* Textos fixos */
+
+.rotulo {
+
+    font-weight: bold;
+}
+
+
+/* Campos preenchidos */
+
+.valor {
+
+    font-weight: normal;
+}
+
+
+/* =====================================
+   IMPRESSÃO
+   ===================================== */
+
+@media print {
+
+    @page {
+
+        size: A4 portrait;
+
+        margin: 0;
+    }
+
+    body {
+
+        margin: 0;
+
+        padding: 0;
+
+        background: white;
+    }
+
+    .painel {
+
+        display: none;
+    }
+
+    #areaImpressao {
+
+        width: 21cm;
+
+        height: 29.7cm;
+
+        margin: 0;
+
+        padding: 0;
+
+        box-shadow: none;
+
+        grid-template-columns: repeat(2, 9.5cm);
+
+        grid-template-rows: repeat(7, 4.1cm);
+
+        column-gap: 0;
+
+        row-gap: 0;
+
+        justify-content: center;
+    }
+
+    .etiqueta {
+
+        break-inside: avoid;
+    }
+}
